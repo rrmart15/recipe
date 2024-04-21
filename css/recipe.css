@@ -32,9 +32,9 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
+/*ol, ul {
     list-style: none;
-}
+}*/
 blockquote, q {
     quotes: none;
 }
@@ -122,11 +122,35 @@ menu li:nth-of-type(4) {
 
 #about img {
     width:100%;
+    
 }
 
-#about p, #details, #ingredients, #directions {
-    margin:5px;
+#about p {
+    margin:10px;
     margin-bottom:20px;
+}
+
+#details dl {
+    padding-bottom:15px;
+    margin-left:10px;
+    width:60%;
+}
+
+#details dt {
+    padding-right:20px;
+    float:left;
+}
+
+#ingredients ul, #directions ol {  
+    margin-left:25px;
+}
+
+#ingredients li {
+    list-style-type:square;
+}
+
+#ingredients li, #directions li {
+   padding-bottom:15px; 
 }
 
 #side-dishes {
@@ -241,13 +265,19 @@ menu li:nth-of-type(4) {
     top: 0;
 }
 
+#social {
+    width:100%;
+    display:inline-grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    justify-content:space-evenly;
+    list-style:none;
+}
+
 #navbar {
     order:1;
 }
 
-header {
-    order:3;
-}
+
 
 form {
     order:2;
