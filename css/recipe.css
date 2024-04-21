@@ -129,12 +129,7 @@ menu li:nth-of-type(4) {
     margin-bottom:20px;
 }
 
-#side {
-
-    width:100%;
-}
-
-#dishes {
+#side-dishes {
     height:100%;
     width:100%;
     display:inline-flex;
@@ -142,24 +137,28 @@ menu li:nth-of-type(4) {
     background-color:#7ABFBF;
 }
 
-#dishes section {
-    margin:5px;
-    padding:10px;
+#side-dishes h2 {
+    padding-top:10px;
+}
+
+#side-dishes section {
+    margin:10px;
     position:relative;
     text-align:left;
 }
 
-#side img {
+#side-dishes img {
     float:left;
-    height:100px;
-    width:100px;
+    padding-right:20px;
+    height:75px;
+    width:75px;
 } 
 
-#dishes h3 {
+#side-dishes h3 {
     padding-bottom:10px;
 }
 
-#dishes p {
+#side-dishes p {
     padding-bottom:5px;
 }
 
