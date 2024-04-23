@@ -66,10 +66,9 @@ h1 {
 h2 {
     font-size:30px;
     text-align:center;
-    margin-bottom:15px;
 }
 
-#navbar h2, #social h2, #social p, footer h2 {
+nav h2, #social h2, #social p, footer h2 {
     visibility:hidden;
 }
 
@@ -77,7 +76,7 @@ h3 {
     font-size:25px;
 }
 
-nav a, nav span, menu li, #social li, footer {
+nav a, nav span, menu li, #social li {
     font-family:"Bebas Neue", sans-serif;
     font-size:20px;
 }
@@ -100,6 +99,105 @@ body {
     flex-direction:column;
 }
 
+header {
+    order:3;
+}
+/*
+nav {
+    display:inline-flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    background-color:#FFFFFF;
+    min-width:414px;
+    box-shadow:0px 3px 3px 0 #BBB;
+    position:fixed;
+    top:0;
+    z-index:5;
+    order:1;
+}
+#dropdown {
+    text-decoration:none; 
+    
+}
+
+nav li a {
+    display:block;
+    padding:20px;
+    text-decoration:none;
+    text-align: center;
+    color:#EB5428;
+}
+
+nav li img {
+    display:none;
+}
+
+nav ul {
+    grid-area: ;
+    padding:0;
+    list-style:none;
+    overflow: hidden;
+    max-height: 0;
+    /*transition: max-height .2s ease-out;
+    clear:both;
+}
+
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    bottom:20px;
+    left:20px;
+}
+
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+
+label span:before, nav label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    /*transition: all .2s ease-out;
+    width: 100%;
+}
+
+nav label span:before {
+    top: 5px;
+}
+nav label span:after {
+    top: -5px;
+}
+
+nav input {
+    display: none;
+}
+
+nav input:checked ~ ul {
+    max-height: 500px;
+}
+
+nav input:checked ~ nav label span {
+    background: transparent;
+}
+nav input:checked ~ nav label span:before {
+    transform: rotate(-45deg);
+}
+nav input:checked ~ nav label span:after {
+    transform: rotate(45deg);
+}
+nav input:checked ~ nav label:not(.steps) span:before, nav input:checked ~ nav label:not(.steps) span:after {
+    top: 0;
+}
+*/
 menu {
     height:30px;
     width:100%;
@@ -108,65 +206,101 @@ menu {
     list-style-type:none;
     text-transform:uppercase;
     padding-bottom:40px;
+    order:4;
 }
 
 menu li {
-    color:#EB5428;
     text-align:center;
     width:60px;
+}
+
+menu li a {
+    color:#EB5428;
+    text-decoration:none;
 }
 
 menu li:nth-of-type(4) {
     width:105px;
 }
 
+#about {
+    order:5;
+}
+
 #about img {
-    width:100%;
-    
+    width:100%;  
 }
 
 #about p {
-    margin:10px;
-    margin-bottom:20px;
+    margin:5px 10px 15px 10px;
+    line-height:23px;
+}
+
+#details {
+    display:grid;
+    grid-template-rows:repeat(6);
+    gap:5px;
+    margin-bottom:15px;  
+    order:6;
+}
+
+#details h2 {
+    margin-bottom:7px;
 }
 
 #details dl {
-    padding-bottom:15px;
     margin-left:10px;
-    width:60%;
 }
 
-#details dt {
+#details dt { 
     padding-right:20px;
     float:left;
 }
 
+#container {
+    margin:15px;
+    order:7;
+}
+
+#ingredients h2 {
+    margin-bottom:15px;
+}
+
 #ingredients ul, #directions ol {  
-    margin-left:25px;
+    margin-left:10px;
 }
 
 #ingredients li {
-    list-style-type:square;
+    list-style-type:square;   
+    padding-bottom:13px; 
+    line-height:18px;   
 }
 
-#ingredients li, #directions li {
-   padding-bottom:15px; 
+#directions h2 {
+    margin-bottom:20px;
+}
+
+#directions li:nth-child(-n + 3) {  
+  line-height:20px; 
+  padding-bottom:15px;
 }
 
 #side-dishes {
-    height:100%;
     width:100%;
-    display:inline-flex;
-    flex-direction:column;
+    display:grid;
+    grid-template-rows:repeat(5);
     background-color:#7ABFBF;
+    margin-bottom:15px;
+    order:8;
 }
 
 #side-dishes h2 {
-    padding-top:10px;
+    margin-top:10px;
 }
 
 #side-dishes section {
-    margin:10px;
+    margin-left:10px;
+    margin-top:30px;
     position:relative;
     text-align:left;
 }
@@ -186,112 +320,143 @@ menu li:nth-of-type(4) {
     padding-bottom:5px;
 }
 
-#navbar {
-    background-color:#FFFFFF;
-    width:100%;
-    box-shadow:1px 1px 4px 0 rgba(0,0,0,.1);
-}
-
-#navbar #hamburger {
-    display:block;
-    float:left;
-    padding:10px 20px;
-    text-decoration:none;
-    
-}
-
-#navbar li a {
-    display:block;
-    padding:20px 20px;
-    text-decoration:none;
-}
-
-#navbar ul {
-    margin:0;
-    padding:0;
-    list-style:none;
-    background-color:#FFFFFF;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    clear:both;
-}
-#navbar label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
-#navbar label span {
-    background-color: #ffffff;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background-color .2s ease-out;
-    width: 18px;
-}
-#navbar label span:before, #navbar label span:after {
-    background: #ffffff;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-#navbar label span:before {
-    top: 5px;
-}
-#navbar label span:after {
-    top: -5px;
-}
-#navbar input {
-    display: none;
-}
-#navbar input:checked ~ #navbar ul {
-    max-height: 500px;
-}
-#navbar input:checked ~ #navbar label span {
-    background: transparent;
-}
-#navbar input:checked ~ #navbar label span:before {
-    transform: rotate(-45deg);
-}
-#navbar input:checked ~ #navbar label span:after {
-    transform: rotate(45deg);
-}
-#navbar input:checked ~ #navbar label:not(.steps) span:before, #navbar input:checked ~ #navbar label:not(.steps) span:after {
-    top: 0;
-}
-
 #social {
+    background-color:#FFFFFF;
+    order:9;
+}
+
+#social ul{
     width:100%;
-    display:inline-grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
+    display:inline-flex;
     justify-content:space-evenly;
-    list-style:none;
+    list-style-type:none;
+    padding-bottom:20px;
 }
 
-#navbar {
-    order:1;
+#social li {
+    text-align:center;
+    width:60px;
 }
 
-
+#social a {
+    text-decoration:none;
+    color:#EB5428;
+}
 
 form {
     order:2;
+    text-align:center;
+    padding-bottom:20px;
+    display:inline-flex;
+    justify-content: center;
 }
 
-menu {
-    order:4;
+form input {
+    border-radius:2px;
+    border-color:#EB5428;
+}
+form button {
+    height:22px;
+    border:none;
 }
 
 footer {
     width:100%;
+    background-color:#FFFFFF;
+    text-align:center;
+    text-transform:uppercase;
+    font-family:"Bebas Neue", sans-serif;
+    font-size:20px;
+    order:11;
 }
 
 footer img {
     height:200px;
-    width:200px;
+    width:200px;  
+}
+
+@media screen and (min-width:768px){
+
+
+    body {
+        width:768px;
+    }
+
+    header {
+        text-align:left;
+    }
+
+    nav img {
+        width:50px;
+        height:50px; 
+    }
+
+    nav ul{
+        width:100%;
+        display:inline-flex;
+        justify-content:space-evenly;
+        list-style-type:none;
+        padding-bottom:20px;
+    }
+
+    nav li {
+        text-align:center;
+        width:60px;
+    }
+
+    #details dl {
+        padding-bottom:15px;
+        margin-left:37%;
+        width:60%;
+    }
+    
+    #details dt {
+        padding-right:20px;
+        float:left;
+    }
+
+    #container {
+        order:6;
+        display:grid;
+        grid-template-columns:28% 70%;
+        margin-right:30px;
+    }
+
+
+
+    #side-dishes {
+        height:100%;
+        width:100%;
+        display:inline-flex;
+        flex-direction:column;
+        background-color:#7ABFBF;
+        margin-bottom:25px;
+    }
+    
+    #side-dishes h2 {
+        padding-top:10px;
+    }
+    
+    #side-dishes section {
+        margin:10px;
+        position:relative;
+        text-align:left;
+    }
+    
+    #side-dishes img {
+        float:left;
+        padding-right:20px;
+        height:75px;
+        width:75px;
+    } 
+    
+    #side-dishes h3 {
+        padding-bottom:10px;
+    }
+    
+    #side-dishes p {
+        padding-bottom:5px;
+    }
+
+   
 }
