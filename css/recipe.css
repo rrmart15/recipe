@@ -404,15 +404,8 @@ footer img {
         width:60px;
     }
 
-    #details dl {
-        padding-bottom:15px;
-        margin-left:37%;
-        width:60%;
-    }
-    
-    #details dt {
-        padding-right:20px;
-        float:left;
+    #details dt { 
+        margin-left:270px;
     }
 
     #container {
@@ -422,19 +415,19 @@ footer img {
         margin-right:30px;
     }
 
-
-
     #side-dishes {
-        height:100%;
-        width:100%;
-        display:inline-flex;
-        flex-direction:column;
         background-color:#7ABFBF;
-        margin-bottom:25px;
+        margin-bottom:10px;        
+        width:100%;
     }
-    
+
     #side-dishes h2 {
         padding-top:10px;
+    }
+
+    #side-dishes div{
+        display:inline-grid;
+        grid-template-columns:1fr 1fr;
     }
     
     #side-dishes section {
@@ -457,6 +450,8 @@ footer img {
     #side-dishes p {
         padding-bottom:5px;
     }
+
+    #side
 
    
 }
