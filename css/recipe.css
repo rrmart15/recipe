@@ -100,24 +100,28 @@ body {
     flex-direction:column;
 }
 
-header {
-    order:3;
+h1 {
+    position:relative;
+    margin-top:90px;
+    bottom:-70px;
 }
 
 nav {
     display:grid;
-    grid-template-columns:repeat(3,135px) ;
+    grid-template-columns:135px 135px 135px;
     min-width:414px;
     background-color: #ffffff;
     box-shadow: 0px 3px 3px #bbb;
-    position: fixed;
-    top: 0;
-    z-index:5;
+    position:fixed;
+    top:0;
     margin:auto;
+    order:1;
+    z-index:5;
+    
 }
 
 nav #logo {
-    display:block;
+    display:inline-block;
     justify-self:center;
     grid-column:2/3;
     grid-row:1/2;
@@ -129,14 +133,15 @@ nav #logo {
 nav #sign {
     display:block;
     position:relative;
+    text-align:center;
     grid-column:3/4;
     grid-row:1/2;
-    right:-65px;
-    bottom:-20px;
+    padding-right:65px;
+    right:-55px;
+    bottom:-5px;
     text-decoration:none;
     color:#000000;
 }
-
 
 nav ul {
     padding:0;
@@ -166,12 +171,12 @@ nav li a {
 nav label {
     cursor: pointer;
     display: inline-block;
-    position: relative;
+    position:absolute;
     user-select: none;
     grid-column:1/2;
     grid-row:1/2;
-    top:-4px;
-    right:-30px;
+    top:-1px;
+    left:30px;
     margin-top:10px;
 }
 label span {
@@ -200,12 +205,11 @@ nav input:checked ~ ul {
 form {
     display:flex;
     justify-content:center;
-    order:2;
-    position: relative;
+    order:1;
+    position:relative;
     text-align:center;
-    padding-top:30px;
     padding-bottom:15px;
-    bottom:-40px;
+    bottom:40px;
     width:100%;
     margin:auto;
 
@@ -226,12 +230,13 @@ form button {
 #wrapper {
     order:4;
     width:100%;
+
 }
 
 menu {
     height:auto;
     text-transform:uppercase;
-    padding:0 20px 10px 20px;
+    padding:30px 20px 10px 20px;
     display:grid;
     grid-template-columns:50px 50px 50px 50px;
     grid-template-rows:1fr;
@@ -454,7 +459,6 @@ footer small {
         width:61%;
         padding:20px 0 20px 70px;
         position:absolute;
-        z-index:0;
         top:285px;
         background-color:rgba(255, 255, 255, .8);
     }
