@@ -61,7 +61,6 @@ h1 {
     font-size:40px;
     text-align:center;
     margin-bottom:15px;
-    margin-top:40px;
 }
 
 h2 {
@@ -104,143 +103,42 @@ header {
     order:3;
 }
 
-nav {
-    display:grid;
-    grid-template-columns:repeat(3,135px) ;
-    min-width:414px;
-    background-color: #ffffff;
-    box-shadow: 0px 3px 3px #bbb;
-    position: fixed;
-    top: 0;
-    z-index:5;
-    margin:auto;
-}
-
-nav #logo {
-    display:block;
-    justify-self:center;
-    grid-column:2/3;
-    grid-row:1/2;
-    background-color:#EB5428;
-    padding-top:5px;
-    padding-bottom:7px;
-}
-
-nav #sign {
-    display:block;
-    position:relative;
-    grid-column:3/4;
-    grid-row:1/2;
-    right:-65px;
-    bottom:-20px;
-    text-decoration:none;
-    color:#000000;
-}
-
-
-nav ul {
-    padding:0;
-    overflow:hidden;
-    list-style:none;
-    max-height:0;
-    grid-column:2/3;
-    grid-row:2/3;
-    justify-self:center;
-}
-
-nav li {
-    text-align:center;
-}
-
-nav li img {
-    display:none;
-}
-
-nav li a {
-    display:block;
-    padding:20px;
-    text-decoration:none;
-    color:#EB5428;
-}
-
-nav label {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    user-select: none;
-    grid-column:1/2;
-    grid-row:1/2;
-    top:-4px;
-    right:-30px;
-    margin-top:10px;
-}
-label span {
-    background-color: #ffffff;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background-color .2s ease-out;
-    width: 18px;
-}
-
-label span:before, label span:after {
-    background: #ffffff;
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-}
-nav input {
-    display: none;
-}
-nav input:checked ~ ul {
-    max-height: 550px;
-}
 
 form {
-    display:flex;
-    justify-content:center;
     order:2;
-    position: relative;
     text-align:center;
-    padding-top:30px;
-    padding-bottom:15px;
-    bottom:-40px;
-    width:100%;
-    margin:auto;
-
+    padding-bottom:20px;
+    display:inline-flex;
+    justify-content: center;
 }
 
 form input {
-    border-radius:1px;
-    width:250px;
-    height:28px;
+    border-radius:2px;
     border-color:#EB5428;
 }
 form button {
-    height:34px;
+    height:22px;
     border:none;
-    background-color:#EB5428;
 }
 
-#wrapper {
+#container-about {
     order:4;
-    width:100%;
 }
 
 menu {
-    height:auto;
+    height:600px;
+    width:100px;
+    width:100%;
+    display:inline-flex;
+    justify-content:space-evenly;
+    list-style-type:none;
     text-transform:uppercase;
-    padding:0 20px 10px 20px;
-    display:grid;
-    grid-template-columns:50px 50px 50px 50px;
-    grid-template-rows:1fr;
-    gap:40px;
+    padding-bottom:40px;
 }
 
 menu li {
-    list-style-type:none;
     text-align:center;
+    width:60px;
 }
 
 menu li a {
@@ -253,7 +151,7 @@ menu li:nth-of-type(4) {
 }
 
 #about img {
-  width:100%;
+    width:100%;  
 }
 
 #about p {
@@ -394,41 +292,8 @@ footer small {
         width:768px;
     }
 
-    form {
-        order:1;
-    }
-
-    ul {
-        max-height: 0;
-        overflow: hidden;
-      }
-      input:checked ~ ul {
-        max-height: 500px;
-      }
-      input {
-        display: none;
-      }
-
-    /*nav {
-        grid-area: ;
-        min-width: 414px;
-        background-color: #ffffff;
-        box-shadow: 0px 3px 3px #bbb;
-        position: fixed;
-        top: 0;
-        z-index:5;
-    }
-    nav ul {
-        grid-area: ;
-        padding: 0;
-        overflow: hidden;
-        list-style: none;
-        max-height: 0;
-    }*/
-
-    h1 {
+    header {
         text-align:left;
-        padding-left:15px;
     }
 
     nav img {
@@ -449,15 +314,6 @@ footer small {
         width:60px;
     }
 
-    menu {
-        gap:120px;
-        width:61%;
-        padding:20px 0 20px 70px;
-        position:absolute;
-        z-index:0;
-        top:285px;
-        background-color:rgba(255, 255, 255, .8);
-    }
     #details dt { 
         margin-left:270px;
     }
@@ -554,26 +410,17 @@ footer small {
 
     #container-about {
         display:grid;
-        grid-template-columns:1fr 1fr 1fr;
+        grid-template-columns:auto auto auto;
+        grid-template-rows:auto;
+        justify-content:space-evenly;
     }
 
-    /*menu {
-        height:auto;
-        text-transform:uppercase;
-        padding:20px;
-        display:grid;
-        grid-template-columns:50px 50px 50px 50px;
-        grid-template-rows:1fr;
-        gap:40px;
-    }*/
-
-    menu {
-        display:inline-block;
-
-    }
-
-    menu li {
-        display:inline-block
+    #menu {
+        position: relative;
+        display:flex;
+        flex-direction:column;
+        height:600px;
+        width:100px;
     }
 
     #about img {
@@ -643,4 +490,5 @@ footer small {
         top:-190px;
         left:60px;
     }
+
 }
