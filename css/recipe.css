@@ -401,25 +401,26 @@ footer small {
 @media screen and (min-width:768px){
     body {
         width:768px;
+        height:1060px;
     }
 
     form {
         position:relative;
-        width:250px;
-        right:-170px;
+        width:275px;
+        right:-150px;
         top:-120px;
-        z-index:10;
+        z-index:11;
     }
     
     form input {
         border-radius:1px;
         width:250px;
-        height:28px;
+        height:30px;
         border-color:#EB5428;
     }
 
     form button {
-        height:34px;
+        height:36px;
         border:none;
         background-color:#EB5428;
     }
@@ -437,10 +438,9 @@ footer small {
 
     nav #sign {
         padding-right:65px;
-        right:-250px;
-        bottom:-5px;
-        height:45px;
-        width:45px;
+        right:-240px;
+        bottom:5px;
+        transform:scale(0.8);
     }
 
     nav {
@@ -448,6 +448,7 @@ footer small {
         position:fixed;
         height:170px;
         justify-content:center;
+        z-index:10;
     }  
         
     nav ul {
@@ -484,6 +485,10 @@ footer small {
         padding-bottom:5px;
     }
 
+    nav li {
+        padding-right:5px;
+    }
+
     nav li a {
         display:inline-block;
     }    
@@ -512,12 +517,19 @@ footer small {
         top:-103px;
     }
 
+    #details {
+        position:relative;
+        top:-100px;
+    }
+
     #details dt { 
         margin-left:270px;
     }
 
     #container {
         display:grid;
+        position:relative;
+        top:-100px;
         grid-template-columns:28% 70%;
         margin-right:30px;
         margin-bottom:0;
@@ -529,6 +541,8 @@ footer small {
 
     #side-dishes {
         margin-bottom:0;
+        position:relative;
+        top:-100px;
     }
 
     #side-dishes div {
@@ -568,6 +582,8 @@ footer small {
         display:inline-flex;
         flex-direction:row-reverse;
         width:100%;
+        position:relative;
+        top:-100px;
     }
 
     #social {
@@ -606,15 +622,65 @@ footer small {
     width:1280px;
     }
 
-    /*menu {
-        height:auto;
-        text-transform:uppercase;
-        padding:20px;
+    nav {
+        min-width:1280px;
+        height:100px;
+    }
+
+    nav #logo {
+        position:relative;
+        background-color:#EB5428;
+        left:-550px;
+        padding:19px;
+        margin:0;
+    
+
+    }
+
+    nav #sign {
+        padding-right:65px;
+        right:-240px;
+        bottom:5px;
+        transform:scale(0.8);
+    }
+
+    form {
+        position:relative;
+        width:275px;
+        right:-10px;
+        top:-10px;
+        z-index:11;
+    }
+
+    h1 {
+        text-align:center;
+    } 
+
+    #wrapper {
         display:grid;
-        grid-template-columns:50px 50px 50px 50px;
-        grid-template-rows:1fr;
-        gap:40px;
-    }*/
+        grid-template-columns:repeat(3,auto);
+        width:100%;
+    }
+
+    #about img {
+        position:relative;
+        width:150px;
+        height:700px;
+        float:left;
+        bottom:-160px;
+    }
+
+    #about p {
+        float:right;
+    }
+
+    menu {
+        position:relative;
+        height:439px;
+        width:50px;
+        padding:30px;
+        bottom:-56px;
+    }
 
     menu {
         display:inline-block;
@@ -632,6 +698,66 @@ footer small {
 
     #about p {
         float:right;
+    }    
+    
+    #details h2 {
+        background-color:#000000;
+        color:rgba(122,191,191,.5); 
+        padding:5px;
+        margin:0;
+    }
+
+    #time {
+        display:flex;        
+        flex-direction:row;
+        justify-content:space-evenly;
+        background-color:#000000;
+        color:rgba(122,191,191,.5);
+        margin-top:-5px;
+        width:100%;
+        gap:80px;
+    }
+
+    #time dl {
+        padding-bottom:10px;
+    }
+
+    #time dt, #time dd {
+        margin:0;
+    } 
+
+    #author dt {
+        margin-left:30px;    
+    }
+
+    #serving dd {
+        margin-left:7px;
+    }
+
+    #container {
+        background-color:#F2F2F2;
+        width:100%;
+        grid-template-columns:28% 77%;;
+        margin:20px auto 0 auto;
+        padding-top:10px;
+        top:-135px;
+    }
+
+    #ingredients ul {
+        margin-left:25px;
+    } 
+
+    #directions {
+        position:relative;
+        left:-100px;
+    }
+    
+    #directions ol {  
+        margin-left:25px;
+    }
+
+    #side-dishes {
+        top:-135px;
     }
 
     #side-dishes section {
@@ -641,7 +767,6 @@ footer small {
     #side-dishes div {
         display:inline-grid;
         grid-template-columns:repeat(4, 285px);
-  
         column-gap:35px;
         justify-self:center;
     }
@@ -662,6 +787,7 @@ footer small {
         width:100%;
         height:100%;
         text-align:center;
+        top:-135px;
     }
 
     #social {
