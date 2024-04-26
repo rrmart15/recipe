@@ -111,13 +111,12 @@ nav {
     grid-template-columns:135px 135px 135px;
     min-width:414px;
     background-color: #ffffff;
-    box-shadow: 0px 3px 3px #bbb;
+    box-shadow:0px 3px 3px #bbb;
     position:fixed;
     top:0;
     margin:auto;
     order:1;
-    z-index:5;
-    
+    z-index:5;  
 }
 
 nav #logo {
@@ -126,8 +125,7 @@ nav #logo {
     grid-column:2/3;
     grid-row:1/2;
     background-color:#EB5428;
-    padding-top:5px;
-    padding-bottom:7px;
+    padding:5px 65px 7px 65px;
 }
 
 nav #sign {
@@ -217,7 +215,7 @@ form {
 
 form input {
     border-radius:1px;
-    width:250px;
+    width:255px;
     height:28px;
     border-color:#EB5428;
 }
@@ -235,12 +233,13 @@ form button {
 
 menu {
     height:auto;
+    width:100%;
     text-transform:uppercase;
-    padding:30px 20px 10px 20px;
+    padding:30px 20px 10px 0;
     display:grid;
     grid-template-columns:50px 50px 50px 50px;
     grid-template-rows:1fr;
-    gap:40px;
+    justify-content:space-evenly;
 }
 
 menu li {
@@ -249,12 +248,14 @@ menu li {
 }
 
 menu li a {
+    display:block;
     color:#EB5428;
     text-decoration:none;
 }
 
-menu li:nth-of-type(4) {
-    width:105px;
+menu li a:hover {
+    background-color:#EB5428;
+    color:#FFFFFF;
 }
 
 #about img {
@@ -268,7 +269,6 @@ menu li:nth-of-type(4) {
 
 #details {
     display:grid;
-    grid-template-rows:repeat(6);
     gap:5px;
     margin-bottom:15px;  
     order:5;
@@ -329,17 +329,21 @@ menu li:nth-of-type(4) {
 }
 
 #side-dishes section {
-    margin-left:10px;
     margin-top:30px;
     position:relative;
     text-align:left;
+    transition:background-color .4s ease 0.1s;
+}
+
+#side-dishes section:hover {                                               
+    background-color:rgba(255,165,0,.5); 
 }
 
 #side-dishes img {
     float:left;
     padding-right:20px;
-    height:75px;
-    width:75px;
+    height:85px;
+    width:85px;
 } 
 
 #side-dishes h3 {
@@ -400,68 +404,114 @@ footer small {
     }
 
     form {
-        order:1;
+        position:relative;
+        width:250px;
+        right:-170px;
+        top:-120px;
+        z-index:10;
+    }
+    
+    form input {
+        border-radius:1px;
+        width:250px;
+        height:28px;
+        border-color:#EB5428;
     }
 
-    ul {
-        max-height: 0;
-        overflow: hidden;
-      }
-      input:checked ~ ul {
-        max-height: 500px;
-      }
-      input {
-        display: none;
-      }
-
-    /*nav {
-        grid-area: ;
-        min-width: 414px;
-        background-color: #ffffff;
-        box-shadow: 0px 3px 3px #bbb;
-        position: fixed;
-        top: 0;
-        z-index:5;
+    form button {
+        height:34px;
+        border:none;
+        background-color:#EB5428;
     }
+
+
+
+    nav #logo {
+        position:relative;
+        background-color:#FFFFFF;
+        left:-355px;
+        padding:0;
+        margin:0;
+
+    }
+
+    nav #sign {
+        padding-right:65px;
+        right:-250px;
+        bottom:-5px;
+        height:45px;
+        width:45px;
+    }
+
+    nav {
+        min-width:768px;
+        position:fixed;
+        height:170px;
+        justify-content:center;
+    }  
+        
     nav ul {
-        grid-area: ;
-        padding: 0;
-        overflow: hidden;
-        list-style: none;
         max-height: 0;
-    }*/
+        overflow:visible;
+        display:grid;        
+        grid-template-columns:repeat(7,1fr);
+        gap:7px;
+        position:absolute;
+        width: 100%;
+        top:-100px;   
+        margin-right:600px;
+    }
+        
 
+    nav input:checked ~ ul {
+        max-height: 500px;
+    }
+
+    nav label {
+        display:none;
+    }
+
+    nav input {
+        display:none;
+    }
+
+    nav li img {
+        position:relative;
+        width:45px;
+        height:45px; 
+        display:list-item;
+        right:-5px;
+        padding-bottom:5px;
+    }
+
+    nav li a {
+        display:inline-block;
+    }    
+    
     h1 {
         text-align:left;
         padding-left:15px;
-    }
-
-    nav img {
-        width:50px;
-        height:50px; 
-    }
-
-    nav ul{
-        width:100%;
-        display:inline-flex;
-        justify-content:space-evenly;
-        list-style-type:none;
-        padding-bottom:20px;
-    }
-
-    nav li {
-        text-align:center;
-        width:60px;
+        bottom:-100px;
+        padding-bottom:50xp;
+    } 
+    
+    #wrapper {
+        margin-top:45px;
     }
 
     menu {
         gap:120px;
-        width:61%;
-        padding:20px 0 20px 70px;
-        position:absolute;
-        top:285px;
+        padding:20px 0 20px 0;
+        position:relative;
         background-color:rgba(255, 255, 255, .8);
+        z-index:5;
     }
+    
+    #about {
+        position:relative;
+        top:-103px;
+    }
+
     #details dt { 
         margin-left:270px;
     }
@@ -554,11 +604,6 @@ footer small {
 @media screen and (min-width:1280px){
     body {
     width:1280px;
-    }
-
-    #container-about {
-        display:grid;
-        grid-template-columns:1fr 1fr 1fr;
     }
 
     /*menu {
