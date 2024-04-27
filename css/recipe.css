@@ -499,8 +499,11 @@ footer small:nth-of-type(2) {
     menu {
         gap:120px;
         padding:15px 0 15px 0;
-        position:relative;
+        position:absolute;
+        top:228px;
         background-color:rgba(255, 255, 255, .8);
+        width:768px;
+ 
     }
 
     #details dt { 
