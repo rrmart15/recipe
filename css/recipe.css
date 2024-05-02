@@ -140,9 +140,12 @@ nav {
     width:55px
 }
 
-#sign a:hover {
-    background-color:#EB5428;
-    color:#FFFFFF;
+nav a:last-of-type:hover {
+    background-color:#EB5428; 
+}
+
+nav svg:last-of-type:hover {
+    stroke:#FFFFFF;
 }
 
 nav ul {
@@ -614,7 +617,6 @@ footer {
     #social li a:hover {
         background-color:#EB5428;
         color:#FFFFFF;
-        height:60px;
     }
 
     #copyright {
