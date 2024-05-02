@@ -661,7 +661,9 @@ footer {
     header {
         display:grid;
         grid-template-columns:repeat(3,auto);
-        grid-template-rows:repeat(3,auto);
+        grid-auto-rows:repeat(3,auto);
+        margin-left:0;
+        margin-right:5px;
     }    
     
     h1 {
@@ -691,17 +693,20 @@ footer {
         grid-row:2/4;
     }
 
+    header p {
+        margin-top:15px;
+        width:630px;
+    }
+
     header p:first-of-type {
         grid-column:3/4;
         grid-row:2/3;
     }
 
-
     header p:last-of-type {
         grid-column:3/4;
-        grid-row:3/4;
-    
-        line-heigh
+        grid-row:2/3;
+        margin-top:120px;
     }
 
 
