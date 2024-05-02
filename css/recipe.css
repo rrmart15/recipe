@@ -661,7 +661,7 @@ footer {
     header {
         display:grid;
         grid-template-columns:repeat(3,auto);
-        grid-auto-rows:repeat(3,auto);
+        grid-template-rows:repeat(3,auto);
         margin-left:0;
         margin-right:5px;
     }    
@@ -802,7 +802,7 @@ footer {
     }
 
     #social {
-        padding-top:30px;
+        padding-top:50px;
     }
 
     #copyright img {
