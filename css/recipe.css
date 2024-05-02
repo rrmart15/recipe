@@ -59,6 +59,7 @@ h1, h2, h3 {
 
 h1 {
     font-size:40px;
+    text-align:center;
 }
 
 h2 {
@@ -240,7 +241,6 @@ form button {
 
 header {
     font-size:40px;
-    text-align:center;
     padding-top:120px;
     order:3;
 }
@@ -277,11 +277,11 @@ main {
     width:100%;
 }
 
-#about img {
+header img {
   width:100%;
 }
 
-#about p {
+header p {
     margin:5px 10px 15px 10px;
     line-height:23px;
 }
@@ -658,59 +658,52 @@ footer {
         z-index:0;
     }
 
-
-
     header {
         display:grid;
         grid-template-columns:repeat(3,auto);
         grid-template-rows:repeat(3,auto);
-    }    h1 {
+    }    
+    
+    h1 {
         text-align:center;
         grid-row:1/2;
         grid-column:1/4;
     } 
 
     menu {
-        grid-row:2/4;
-        grid-column:1/2;
         display:grid;
         grid-template-columns:1fr;
         grid-template-rows:50px 50px 50px 50px;
-        float:left;
         width:120px;
-        height:897px;
+        height:auto;
         background-color:#FFFFFF;
         border-style:solid;
         border-radius:6px;
         border-color:#EB5428;
-        position: relative;
-        top:0;
-
-    }
-
-    #about img {
+        position:relative; 
         grid-row:2/4;
+        grid-column:1/2; 
+    }
+
+    header img {
+        float:left;
         grid-column:2/3;
-        width:500px;
-        height:927px;
+        grid-row:2/4;
     }
 
-    #about p {
-        line-height:23px;
-    }
-
-    #about p:first-of-type {
-        width:650px;
+    header p:first-of-type {
+        grid-column:3/4;
         grid-row:2/3;
-        grid-column:3/4;
-
     }
 
-    #about p:last-of-type {
-        width:650px;
+
+    header p:last-of-type {
+        grid-column:3/4;
         grid-row:3/4;
-        grid-column:3/4;
+    
+        line-heigh
     }
+
 
    #details {
     width:100%;
