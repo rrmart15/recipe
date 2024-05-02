@@ -428,9 +428,10 @@ footer {
 
     form {
         position:fixed;
-        top:25px;
-        left:400px;
+        top:-580px;
+        right:200px;
         z-index:10;
+        height:60px;
     }
     
     form input {
@@ -512,6 +513,7 @@ footer {
     nav li a:hover {
         background-color:#EB5428;
         color:#FFFFFF;
+        height:60px;
     }
 
     h1 {
@@ -612,6 +614,7 @@ footer {
     #social li a:hover {
         background-color:#EB5428;
         color:#FFFFFF;
+        height:60px;
     }
 
     #copyright {
